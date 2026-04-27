@@ -1071,19 +1071,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav class="topbar">
-  <a href="../index.html" class="topbar-logo">Sapori <span>d'Italia</span></a>
+  <a href="/" class="topbar-logo">Sapori <span>d'Italia</span></a>
   <ul class="topbar-nav">
-    <li><a href="../pasta/index.html">Pasta</a></li>
-    <li><a href="../antipasti/index.html">Antipasti</a></li>
-    <li><a href="../dolci/index.html">Dolci</a></li>
-    <li><a href="../secondi/index.html">Secondi</a></li>
+    <li><a href="../pasta/">Pasta</a></li>
+    <li><a href="../antipasti/">Antipasti</a></li>
+    <li><a href="../dolci/">Dolci</a></li>
+    <li><a href="../secondi/">Secondi</a></li>
   </ul>
 </nav>
 
 <div class="page-wrap">
 
   <div class="breadcrumb">
-    <a href="../index.html">Home</a> &rsaquo; <a href="../index.html#{category_anchor}">{tag}</a> &rsaquo; {h1}
+    <a href="/">Home</a> &rsaquo; <a href="/#{category_anchor}">{tag}</a> &rsaquo; {h1}
   </div>
 
   <span class="article-tag">{tag}</span>
@@ -1167,7 +1167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <footer>
-  &copy; 2026 <a href="../index.html">Sapori d'Italia</a> &mdash; Tutti i diritti riservati &nbsp;|&nbsp;
+  &copy; 2026 <a href="/">Sapori d'Italia</a> &mdash; Tutti i diritti riservati &nbsp;|&nbsp;
   <a href="../privacy-policy.html">Privacy</a> &nbsp;|&nbsp;
   <a href="../disclaimer.html">Disclaimer</a>
 </footer>
