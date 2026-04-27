@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contattaci — Sapori d'Italia</title>
+  <meta name="description" content="Hai domande, suggerimenti o vuoi collaborare con Sapori d'Italia? Scrivici — risponderemo entro 48 ore." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #b5201a; --gold: #c9973a; --cream: #fdfaf4; --cream-2: #f5f0e8; --dark: #1c1209; --text: #1e1a16; --muted: #7a6f65; --border: #e8e0d4; --white: #ffffff; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.8; font-size: 17px; }
+
+    .navbar { position: sticky; top: 0; z-index: 100; background: var(--dark); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--gold); font-style: italic; }
+    .nav-links { list-style: none; display: flex; gap: 32px; }
+    .nav-links a { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; text-transform: uppercase; letter-spacing: 1.4px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .page-hero { background: var(--dark); padding: 80px 24px 72px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,151,58,0.08) 0%, transparent 70%); }
+    .page-hero .eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; color: var(--white); line-height: 1.15; }
+    .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 500px; margin: 18px auto 0; font-weight: 300; }
+
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 72px 24px 100px; }
+
+    /* CONTACT GRID */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; align-items: start; }
+
+    /* INFO COLUMN */
+    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--text); margin-bottom: 16px; }
+    .contact-info p { color: #4a413a; margin-bottom: 28px; font-size: 15.5px; }
+
+    .info-item { display: flex; gap: 14px; margin-bottom: 24px; align-items: flex-start; }
+    .info-icon { width: 44px; height: 44px; background: var(--dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+    .info-item h4 { font-size: 13px; font-weight: 600; letter-spacing: 0.5px; color: var(--text); margin-bottom: 4px; }
+    .info-item p { font-size: 14px; color: var(--muted); margin: 0; }
+    .info-item a { color: var(--red); text-decoration: none; }
+    .info-item a:hover { text-decoration: underline; }
+
+    /* FORM */
+    .contact-form { background: var(--white); border: 2px solid var(--border); border-radius: 20px; padding: 40px; box-shadow: 0 4px 28px rgba(0,0,0,0.05); }
+    .contact-form h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--text); margin-bottom: 28px; padding-bottom: 14px; border-bottom: 2px solid var(--border); }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: var(--cream);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,151,58,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 140px; }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--red);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .submit-btn:hover { background: #8f1713; transform: translateY(-1px); }
+
+    .form-note { font-size: 12px; color: var(--muted); margin-top: 14px; text-align: center; line-height: 1.6; }
+    .form-note a { color: var(--red); text-decoration: none; }
+
+    /* FOOTER */
+    footer { background: var(--dark); color: rgba(255,255,255,0.4); text-align: center; padding: 48px 24px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); display: block; margin-bottom: 20px; }
+    .footer-logo span { color: var(--gold); font-style: italic; }
+    .footer-links { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 20px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.22); }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 0 20px; } .nav-links { gap: 16px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .form-row { grid-template-columns: 1fr; }
+      .page-wrap { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Sapori <span>d'Italia</span></a>
+  <ul class="nav-links">
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">Siamo qui per te</span>
+  <h1>Contattaci</h1>
+  <p>Hai domande, suggerimenti o vuoi collaborare? Scrivici — ti risponderemo entro 48 ore.</p>
+</div>
+
+<div class="page-wrap">
+  <div class="contact-grid">
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2>Come puoi trovarci</h2>
+      <p>Siamo sempre felici di ricevere messaggi, suggerimenti di ricette o proposte di collaborazione. Non esitare a scriverci.</p>
+
+      <div class="info-item">
+        <div class="info-icon">✉️</div>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:info@saporidItalia.it">info@saporidItalia.it</a></p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">⏱️</div>
+        <div>
+          <h4>Tempi di risposta</h4>
+          <p>Rispondiamo entro 24–48 ore lavorative.</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">🤝</div>
+        <div>
+          <h4>Collaborazioni</h4>
+          <p>Per partnership, sponsorizzazioni e collaborazioni editoriali scrivi all'oggetto <em>"Collaborazione"</em>.</p>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-icon">📖</div>
+        <div>
+          <h4>Ricette di famiglia</h4>
+          <p>Hai una ricetta tradizionale da condividere? Raccontacela — potrebbe finire sul sito!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-form">
+      <h2>Inviaci un messaggio</h2>
+      <form action="#" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="Il tuo nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="la@tua.email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Oggetto</label>
+          <select id="subject" name="subject">
+            <option value="">Seleziona un argomento</option>
+            <option value="ricetta">Domanda su una ricetta</option>
+            <option value="collaborazione">Collaborazione / Partnership</option>
+            <option value="ricetta-famiglia">Condividi una ricetta di famiglia</option>
+            <option value="errore">Segnala un errore</option>
+            <option value="altro">Altro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Messaggio</label>
+          <textarea id="message" name="message" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Invia il messaggio</button>
+        <p class="form-note">
+          Inviando questo modulo accetti la nostra
+          <a href="privacy-policy.html">Privacy Policy</a>.
+          I tuoi dati non saranno mai condivisi con terze parti.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">Sapori <span>d'Italia</span></span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+    <li><a href="about.html">Chi Siamo</a></li>
+    <li><a href="contact.html">Contatti</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Sapori d'Italia &mdash; Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>

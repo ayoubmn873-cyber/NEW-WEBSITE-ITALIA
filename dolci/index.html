@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiramisù della Nonna — Ricetta Classica Originale | Sapori d'Italia</title>
+  <meta name="description" content="Il vero tiramisù italiano: mascarpone fresco, uova di qualità, caffè espresso e savoiardi. Niente panna, niente scorciatoie. La ricetta della nonna." />
+  <link rel="canonical" href="https://saporidItalia.it/dolci/" />
+  <meta property="og:title" content="Tiramisù della Nonna — Ricetta Classica Originale" />
+  <meta property="og:image" content="https://saporidItalia.it/dolci/image-1.jpg" />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Recipe","name":"Tiramisù della Nonna","description":"Il vero tiramisù italiano con mascarpone fresco, uova di qualità, caffè espresso e savoiardi. Ricetta classica originale.","image":["https://saporidItalia.it/dolci/image-1.jpg","https://saporidItalia.it/dolci/image-2.jpg"],"author":{"@type":"Organization","name":"Sapori d'Italia"},"datePublished":"2026-04-27","prepTime":"PT30M","totalTime":"PT4H30M","recipeCategory":"Dolce","recipeCuisine":"Italiana","keywords":"tiramisu, tiramisu ricetta originale, tiramisu classico, dolce italiano","recipeYield":"8 persone"}]}
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red:#b5201a; --gold:#c9973a; --dark:#111009; --dark2:#1e1a14; --cream:#fdfaf5; --cream2:#f5f0e8; --text:#1a1714; --muted:#7a7068; --border:#e5ddd4; --white:#fff; }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--cream); color:var(--text); overflow-x:hidden; }
+    .nav { position:fixed; top:0; left:0; right:0; z-index:1000; height:64px; display:flex; align-items:center; padding:0 40px; transition:background .4s,backdrop-filter .4s; }
+    .nav.scrolled { background:rgba(17,16,9,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(255,255,255,0.06); }
+    .nav-logo { font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#fff; text-decoration:none; flex-shrink:0; }
+    .nav-logo em { color:var(--gold); font-style:italic; }
+    .nav-links { display:flex; gap:32px; margin:0 auto; list-style:none; }
+    .nav-links a { font-size:12px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.7); text-decoration:none; transition:color .2s; }
+    .nav-links a:hover,.nav-links a.active { color:var(--gold); }
+    .nav-back { font-size:13px; color:rgba(255,255,255,0.55); text-decoration:none; flex-shrink:0; transition:color .2s; display:flex; align-items:center; gap:6px; }
+    .nav-back:hover { color:var(--gold); }
+    .hero { position:relative; height:90vh; min-height:560px; display:flex; align-items:flex-end; overflow:hidden; }
+    .hero img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform 8s ease-out; }
+    .hero img.loaded { transform:scale(1.04); }
+    .hero-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.3) 45%,rgba(0,0,0,0.15) 100%); }
+    .hero-body { position:relative; padding:0 52px 56px; max-width:900px; }
+    .hero-tag { display:inline-block; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--gold); border:1px solid rgba(201,151,58,0.5); padding:5px 14px; border-radius:20px; margin-bottom:18px; }
+    .hero-title { font-family:'Playfair Display',serif; font-size:clamp(2.2rem,5vw,3.8rem); font-weight:700; color:#fff; line-height:1.1; margin-bottom:16px; letter-spacing:-0.5px; }
+    .hero-sub { font-size:1rem; color:rgba(255,255,255,0.7); line-height:1.7; max-width:600px; font-weight:300; }
+    .breadbar { background:var(--dark2); padding:14px 52px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+    .breadcrumb { font-size:13px; color:rgba(255,255,255,0.45); }
+    .breadcrumb a { color:rgba(255,255,255,0.6); text-decoration:none; }
+    .breadcrumb a:hover { color:var(--gold); }
+    .breadcrumb span { color:rgba(255,255,255,0.25); margin:0 8px; }
+    .pin-btn { display:inline-flex; align-items:center; gap:8px; background:#E60023; color:#fff; font-size:12px; font-weight:600; padding:8px 18px; border-radius:20px; text-decoration:none; transition:opacity .2s; }
+    .pin-btn:hover { opacity:.88; }
+    .meta-strip { background:var(--cream2); border-bottom:1px solid var(--border); padding:0 52px; display:flex; gap:0; overflow-x:auto; }
+    .meta-item { padding:20px 28px; border-right:1px solid var(--border); text-align:center; flex-shrink:0; }
+    .meta-item:last-child { border-right:none; }
+    .meta-lbl { font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:5px; }
+    .meta-val { font-size:16px; font-weight:700; color:var(--text); }
+    .content-wrap { max-width:900px; margin:0 auto; padding:60px 40px 100px; }
+    .prose h2 { font-family:'Playfair Display',serif; font-size:1.7rem; font-weight:700; color:var(--text); margin:48px 0 16px; padding-bottom:12px; border-bottom:2px solid var(--border); }
+    .prose p { font-size:1.05rem; color:#4a413a; line-height:1.85; margin-bottom:18px; }
+    .prose strong { color:var(--text); font-weight:600; }
+    .recipe-card { background:var(--white); border-radius:24px; overflow:hidden; margin:48px 0; box-shadow:0 4px 32px rgba(0,0,0,0.07); border:1px solid var(--border); }
+    .recipe-card-head { background:var(--dark); padding:28px 36px; }
+    .recipe-card-head h3 { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--white); margin-bottom:4px; }
+    .recipe-card-head p { font-size:12px; color:rgba(255,255,255,0.45); }
+    .recipe-card-body { padding:36px; }
+    .rc-section-title { font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin:28px 0 16px; }
+    .rc-section-title:first-child { margin-top:0; }
+    .ing-list { list-style:none; }
+    .ing-list li { display:flex; align-items:flex-start; gap:12px; padding:10px 0; border-bottom:1px solid #f5f1ec; font-size:15px; color:#3d3530; line-height:1.5; }
+    .ing-list li:last-child { border-bottom:none; }
+    .ing-list li::before { content:"—"; color:var(--gold); font-weight:700; flex-shrink:0; margin-top:1px; }
+    .step-list { list-style:none; counter-reset:step; }
+    .step-list li { counter-increment:step; display:flex; gap:20px; padding:18px 0; border-bottom:1px solid #f5f1ec; font-size:15px; color:#4a413a; line-height:1.7; align-items:flex-start; }
+    .step-list li:last-child { border-bottom:none; }
+    .step-list li::before { content:counter(step); background:var(--dark); color:var(--white); font-weight:700; font-size:11px; min-width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+    .tip-box { background:linear-gradient(135deg,#fffbf0,#fef8e7); border-left:4px solid var(--gold); border-radius:0 16px 16px 0; padding:22px 28px; margin:32px 0; }
+    .tip-box-title { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#a07820; margin-bottom:14px; }
+    .tip-box ul { padding-left:20px; }
+    .tip-box li { font-size:15px; color:#5a4e30; margin-bottom:8px; line-height:1.6; }
+    .mid-image { margin:48px 0; border-radius:20px; overflow:hidden; box-shadow:0 12px 48px rgba(0,0,0,0.12); }
+    .mid-image img { width:100%; max-height:560px; object-fit:cover; display:block; }
+    .faq { margin-top:56px; }
+    .faq-title { font-family:'Playfair Display',serif; font-size:1.8rem; font-weight:700; color:var(--text); margin-bottom:32px; padding-bottom:14px; border-bottom:2px solid var(--border); }
+    .faq-item { border-bottom:1px solid var(--border); }
+    .faq-item summary { list-style:none; padding:20px 0; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-q { font-family:'Playfair Display',serif; font-size:1.05rem; font-weight:700; color:var(--text); line-height:1.4; }
+    .faq-icon { width:28px; height:28px; border-radius:50%; background:var(--cream2); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:18px; color:var(--muted); transition:transform .3s,background .2s; }
+    details[open] .faq-icon { transform:rotate(45deg); background:var(--dark); color:var(--white); }
+    .faq-item p { font-size:15.5px; color:#5a5048; line-height:1.75; padding:0 0 20px; }
+    .footer { background:var(--dark); padding:56px 40px 32px; margin-top:80px; }
+    .footer-top { display:flex; justify-content:space-between; align-items:flex-start; max-width:900px; margin:0 auto 40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.08); flex-wrap:wrap; gap:32px; }
+    .footer-logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:#fff; text-decoration:none; font-weight:700; }
+    .footer-logo em { color:var(--gold); font-style:italic; }
+    .footer-links { display:flex; gap:24px; flex-wrap:wrap; }
+    .footer-links a { font-size:13px; color:rgba(255,255,255,0.45); text-decoration:none; transition:color .2s; }
+    .footer-links a:hover { color:#fff; }
+    .footer-copy { max-width:900px; margin:0 auto; font-size:12px; color:rgba(255,255,255,0.22); text-align:center; }
+    @media(max-width:768px) { .nav{padding:0 20px;} .hero-body{padding:0 24px 40px;} .breadbar{padding:12px 20px;} .meta-strip{padding:0 20px;} .content-wrap{padding:40px 20px 80px;} .recipe-card-body{padding:24px 20px;} .footer{padding:40px 20px 28px;} }
+  </style>
+</head>
+<body>
+<nav class="nav" id="mainNav">
+  <a href="../index.html" class="nav-logo">Sapori <em>d'Italia</em></a>
+  <ul class="nav-links">
+    <li><a href="../pasta/index.html">Pasta</a></li>
+    <li><a href="../antipasti/index.html">Antipasti</a></li>
+    <li><a href="index.html" class="active">Dolci</a></li>
+    <li><a href="../secondi/index.html">Secondi</a></li>
+  </ul>
+  <a href="../index.html" class="nav-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg> Home</a>
+</nav>
+
+<section class="hero">
+  <img id="heroImg" src="image-1.jpg" alt="Tiramisù classico in pirofila bianca con strati visibili e cacao amaro" fetchpriority="high" />
+  <div class="hero-overlay"></div>
+  <div class="hero-body">
+    <span class="hero-tag">Dolci &nbsp;·&nbsp; Tradizione Italiana</span>
+    <h1 class="hero-title">Tiramisù<br/>della Nonna</h1>
+    <p class="hero-sub">Niente panna, niente scorciatoie. Solo mascarpone fresco, uova, caffè espresso vero e savoiardi. La ricetta che ogni nonna italiana porta con sé.</p>
+  </div>
+</section>
+
+<div class="breadbar">
+  <nav class="breadcrumb"><a href="../index.html">Home</a><span>›</span><a href="index.html">Dolci</a><span>›</span>Tiramisù della Nonna</nav>
+  <a href="https://pinterest.com/pin/create/button/?url=https://saporidItalia.it/dolci/&media=https://saporidItalia.it/dolci/image-1.jpg" class="pin-btn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg> Salva su Pinterest</a>
+</div>
+
+<div class="meta-strip">
+  <div class="meta-item"><span class="meta-lbl">Preparazione</span><span class="meta-val">30 min</span></div>
+  <div class="meta-item"><span class="meta-lbl">Riposo</span><span class="meta-val">4 ore+</span></div>
+  <div class="meta-item"><span class="meta-lbl">Cottura</span><span class="meta-val">Nessuna</span></div>
+  <div class="meta-item"><span class="meta-lbl">Porzioni</span><span class="meta-val">8 persone</span></div>
+  <div class="meta-item"><span class="meta-lbl">Difficoltà</span><span class="meta-val">Facile</span></div>
+  <div class="meta-item"><span class="meta-lbl">Calorie</span><span class="meta-val">~420</span></div>
+</div>
+
+<div class="content-wrap">
+  <div class="prose">
+    <h2>Perché la versione classica è insuperabile</h2>
+    <p>Il tiramisù nasce negli anni '60-'70 nel Veneto. La ricetta originale è semplice nella sua logica: una crema ricca di mascarpone e uova montate che avvolge biscotti savoiardi imbevuti di caffè forte. Il contrasto tra la dolcezza della crema e l'amarezza del caffè è il genio di questo dolce. La versione con panna è una semplificazione moderna — meno intensa, priva della consistenza setosa che solo il mascarpone puro può dare.</p>
+    <h2>Il segreto della crema perfetta al mascarpone</h2>
+    <p>Il mascarpone va incorporato <strong>a temperatura ambiente</strong> — non freddo di frigorifero, che formerebbe grumi. I tuorli devono essere montati a lungo con lo zucchero fino a diventare chiari e quasi bianchi. Gli albumi vanno a neve ferma e incorporati in 3 riprese con movimenti delicatissimi dal basso verso l'alto — è il momento più critico della ricetta.</p>
+  </div>
+
+  <div class="recipe-card">
+    <div class="recipe-card-head"><h3>Tiramisù della Nonna — Ricetta Completa</h3><p>Per 8 persone &nbsp;·&nbsp; 30 min + 4 ore di riposo</p></div>
+    <div class="recipe-card-body">
+      <div class="rc-section-title">Ingredienti</div>
+      <ul class="ing-list">
+        <li>400g savoiardi di qualità (preferibilmente Vicenzovo)</li>
+        <li>500g mascarpone fresco (a temperatura ambiente)</li>
+        <li>5 uova medie fresche (separate)</li>
+        <li>120g zucchero semolato</li>
+        <li>400ml caffè espresso freddo</li>
+        <li>30ml Marsala secco (facoltativo)</li>
+        <li>Cacao amaro in polvere q.b. (Van Houten o simile)</li>
+        <li>1 pizzico di sale</li>
+      </ul>
+      <div class="rc-section-title">Preparazione</div>
+      <ol class="step-list">
+        <li><strong>Caffè:</strong> Prepara il caffè espresso e lascialo raffreddare completamente. Se vuoi aggiungere il Marsala, mescolalo al caffè freddo. <strong>Mai usare il caffè caldo</strong>.</li>
+        <li><strong>Tuorli:</strong> Monta i tuorli con lo zucchero ad alta velocità per <strong>5-6 minuti</strong> fino a ottenere un composto chiaro, spumoso e quasi bianco.</li>
+        <li><strong>Mascarpone:</strong> Aggiungi il mascarpone ai tuorli in 2-3 riprese. Incorpora con una spatola con movimenti delicati dal basso verso l'alto. Crema liscia e vellutata.</li>
+        <li><strong>Albumi a neve:</strong> In una ciotola pulita monta gli albumi con il sale a neve <strong>molto ferma</strong>. Devono formare picchi rigidi che restano in piedi.</li>
+        <li><strong>Incorporazione:</strong> Aggiungi gli albumi alla crema in 3 riprese, con movimenti dal basso verso l'alto molto delicati. Non perdere il volume.</li>
+        <li><strong>Savoiardi:</strong> Immergi i savoiardi nel caffè freddo per <strong>1 secondo per lato</strong> — non di più. Disponili in uno strato compatto nella pirofila.</li>
+        <li><strong>Strati:</strong> Copri il primo strato con metà crema. Poi un secondo strato di savoiardi e tutta la crema rimanente. Livella. Spolvera con cacao amaro. Copri e refrigera <strong>minimo 4 ore, idealmente tutta la notte</strong>.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-box-title">✦ I segreti del tiramisù perfetto</div>
+    <ul>
+      <li>Il mascarpone a temperatura ambiente è fondamentale — da freddo forma grumi che non si sciolgono.</li>
+      <li>Non inzuppare troppo i savoiardi: 1 secondo per lato è sufficiente.</li>
+      <li>Il riposo notturno è il vero ingrediente segreto — il giorno dopo è sempre più buono.</li>
+      <li>Setaccia il cacao prima di spolverizzare per ottenere uno strato uniforme.</li>
+    </ul>
+  </div>
+
+  <div class="mid-image"><img src="image-2.jpg" alt="Porzione individuale di tiramisù con forchetta che taglia gli strati" loading="lazy" /></div>
+
+  <section class="faq">
+    <h2 class="faq-title">Domande Frequenti</h2>
+    <details class="faq-item"><summary><span class="faq-q">Il tiramisù si fa con uova crude?</span><span class="faq-icon">+</span></summary><p>La ricetta tradizionale prevede uova crude. Se hai preoccupazioni usa uova pastorizzate, oppure pastorizza i tuorli a bagnomaria con lo zucchero fino a 82°C.</p></details>
+    <details class="faq-item"><summary><span class="faq-q">Quanto deve riposare il tiramisù?</span><span class="faq-icon">+</span></summary><p>Il minimo sono 4 ore in frigorifero, ma l'ideale è prepararlo la sera prima. Il riposo permette ai savoiardi di ammorbidirsi e alla crema di compattarsi.</p></details>
+    <details class="faq-item"><summary><span class="faq-q">Si può fare il tiramisù senza Marsala?</span><span class="faq-icon">+</span></summary><p>Assolutamente sì. Il Marsala è facoltativo. Puoi usare rum, Kahlúa o caffè liquore, oppure ometterlo del tutto per una versione analcolica.</p></details>
+    <details class="faq-item"><summary><span class="faq-q">Qual è la differenza tra tiramisù classico e tiramisù con panna?</span><span class="faq-icon">+</span></summary><p>Il tiramisù classico usa solo mascarpone, uova e zucchero. La panna non è nella ricetta originale. La versione classica è più ricca, setosa e autentica.</p></details>
+    <details class="faq-item"><summary><span class="faq-q">Come si conserva il tiramisù?</span><span class="faq-icon">+</span></summary><p>In frigorifero per 3-4 giorni coperto con pellicola. Non si congela bene: la crema al mascarpone cambia texture e i savoiardi diventano gommosi.</p></details>
+  </section>
+</div>
+
+<footer class="footer">
+  <div class="footer-top">
+    <a href="../index.html" class="footer-logo">Sapori <em>d'Italia</em></a>
+    <div class="footer-links">
+      <a href="../index.html">Home</a><a href="../pasta/index.html">Pasta</a><a href="../antipasti/index.html">Antipasti</a><a href="../secondi/index.html">Secondi</a><a href="../about.html">Chi Siamo</a><a href="../privacy-policy.html">Privacy</a>
+    </div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Sapori d'Italia — Tutti i diritti riservati</p>
+</footer>
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+  const img = document.getElementById('heroImg');
+  img.addEventListener('load', () => img.classList.add('loaded'));
+  if (img.complete) img.classList.add('loaded');
+</script>
+</body>
+</html>

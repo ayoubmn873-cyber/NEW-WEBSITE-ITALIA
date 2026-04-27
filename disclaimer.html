@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disclaimer — Sapori d'Italia</title>
+  <meta name="description" content="Disclaimer di Sapori d'Italia. Limitazioni di responsabilità, utilizzo delle ricette e dei contenuti pubblicati sul sito." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #b5201a; --gold: #c9973a; --cream: #fdfaf4; --dark: #1c1209; --text: #1e1a16; --muted: #7a6f65; --border: #e8e0d4; --white: #ffffff; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.8; font-size: 16px; }
+
+    .navbar { position: sticky; top: 0; z-index: 100; background: var(--dark); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--gold); font-style: italic; }
+    .nav-links { list-style: none; display: flex; gap: 32px; }
+    .nav-links a { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; text-transform: uppercase; letter-spacing: 1.4px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .page-hero { background: var(--dark); padding: 64px 24px 56px; text-align: center; }
+    .page-hero .eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; color: var(--white); }
+    .page-hero .updated { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 64px 24px 100px; }
+
+    .disclaimer-section { margin-bottom: 44px; }
+    .disclaimer-section h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: var(--text); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+    .disclaimer-section p { color: #4a413a; margin-bottom: 14px; font-size: 15.5px; }
+    .disclaimer-section ul { padding-left: 20px; margin-bottom: 14px; }
+    .disclaimer-section li { color: #4a413a; margin-bottom: 8px; font-size: 15.5px; }
+    .disclaimer-section a { color: var(--red); }
+    .disclaimer-section strong { color: var(--text); }
+
+    .warning-box { background: #fdf2f2; border-left: 4px solid var(--red); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; }
+    .warning-box p { margin: 0; font-size: 15px; color: #5a1010; }
+
+    .info-box { background: #fffbf0; border-left: 4px solid var(--gold); border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 20px 0; }
+    .info-box p { margin: 0; font-size: 15px; color: #5a4e30; }
+
+    footer { background: var(--dark); color: rgba(255,255,255,0.4); text-align: center; padding: 48px 24px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); display: block; margin-bottom: 20px; }
+    .footer-logo span { color: var(--gold); font-style: italic; }
+    .footer-links { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 20px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.22); }
+
+    @media (max-width: 768px) { .navbar { padding: 0 20px; } .nav-links { gap: 16px; } .page-wrap { padding: 48px 20px 80px; } }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Sapori <span>d'Italia</span></a>
+  <ul class="nav-links">
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">Informativa legale</span>
+  <h1>Disclaimer</h1>
+  <p class="updated">Ultimo aggiornamento: 26 aprile 2026</p>
+</div>
+
+<div class="page-wrap">
+
+  <div class="disclaimer-section">
+    <h2>1. Scopo del Disclaimer</h2>
+    <p>
+      Il presente Disclaimer regola l'utilizzo del sito web <strong>Sapori d'Italia</strong>
+      (di seguito "il Sito") e dei contenuti in esso pubblicati. Utilizzando il Sito,
+      l'utente accetta integralmente le condizioni descritte in questa pagina.
+    </p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>2. Accuratezza delle ricette</h2>
+    <p>
+      Le ricette pubblicate su Sapori d'Italia sono frutto di ricerca, sperimentazione e passione
+      per la cucina italiana. Ci impegniamo a garantire l'accuratezza delle informazioni,
+      tuttavia i risultati possono variare in base a diversi fattori:
+    </p>
+    <ul>
+      <li>Variazioni negli ingredienti (marca, qualità, stagionalità).</li>
+      <li>Differenze tra attrezzature da cucina (forni, pentole, piani cottura).</li>
+      <li>Abilità e tecnica personale del cuoco.</li>
+      <li>Condizioni ambientali (altitudine, umidità, temperatura).</li>
+    </ul>
+    <p>
+      Il Sito non si assume responsabilità per risultati diversi da quelli descritti nelle ricette.
+    </p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>3. Informazioni nutrizionali</h2>
+    <div class="warning-box">
+      <p><strong>Avviso importante:</strong> Le informazioni nutrizionali (calorie, proteine, grassi, carboidrati) indicate nelle ricette sono valori approssimativi calcolati a scopo puramente indicativo.</p>
+    </div>
+    <p>
+      I valori nutrizionali possono variare significativamente in base agli ingredienti specifici
+      utilizzati, alle porzioni e ai metodi di preparazione. Queste informazioni <strong>non costituiscono
+      consulenza medica o dietetica</strong> e non devono essere utilizzate come base per decisioni
+      legate alla salute o a diete terapeutiche.
+    </p>
+    <p>
+      Per esigenze nutrizionali specifiche o per patologie alimentari (diabete, celiachia, allergie,
+      ecc.), consulta un medico o un dietista qualificato.
+    </p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>4. Sicurezza alimentare</h2>
+    <p>
+      Alcune ricette del Sito prevedono l'utilizzo di ingredienti crudi o a bassa cottura
+      (uova crude nel tiramisù, carni, pesce). Il Sito ricorda che:
+    </p>
+    <ul>
+      <li>I prodotti di origine animale crudi possono costituire un rischio microbiologico.</li>
+      <li>È consigliabile utilizzare ingredienti freschi e di provenienza certificata.</li>
+      <li>Le persone a rischio (donne in gravidanza, bambini, anziani, immunocompromessi) devono prestare particolare attenzione o evitare preparazioni con ingredienti crudi.</li>
+    </ul>
+    <div class="info-box">
+      <p>Sapori d'Italia non è responsabile per malattie o danni derivanti dall'utilizzo improprio degli ingredienti o dal mancato rispetto delle norme igienico-sanitarie.</p>
+    </div>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>5. Proprietà intellettuale</h2>
+    <p>
+      Tutti i contenuti pubblicati su Sapori d'Italia — testi, immagini, grafica, loghi e ricette —
+      sono protetti dalla normativa sul diritto d'autore (Legge n. 633/1941 e successive modifiche)
+      e dalle norme comunitarie applicabili.
+    </p>
+    <ul>
+      <li>È vietata la riproduzione, copia o distribuzione dei contenuti senza autorizzazione scritta.</li>
+      <li>È consentita la citazione parziale dei contenuti a scopo non commerciale, purché con esplicita attribuzione a Sapori d'Italia e link alla fonte.</li>
+      <li>Le immagini generate con intelligenza artificiale sono di proprietà di Sapori d'Italia.</li>
+    </ul>
+    <p>Per richieste di utilizzo dei contenuti, scrivi a: <a href="mailto:info@saporidItalia.it">info@saporidItalia.it</a></p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>6. Link a siti esterni</h2>
+    <p>
+      Il Sito può contenere link a siti web di terze parti (es. Pinterest, Google). Questi link
+      sono forniti a scopo informativo. Sapori d'Italia non ha controllo sui contenuti di tali siti
+      e <strong>non si assume alcuna responsabilità</strong> per il loro contenuto,
+      la loro politica sulla privacy o la loro accuratezza.
+    </p>
+    <p>
+      La presenza di un link su Sapori d'Italia non costituisce approvazione o raccomandazione
+      del sito esterno.
+    </p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>7. Limitazione di responsabilità</h2>
+    <p>
+      Sapori d'Italia non garantisce che il Sito sia sempre disponibile, privo di errori o che
+      le informazioni siano sempre complete e aggiornate. Il Sito si riserva il diritto di
+      modificare, sospendere o interrompere qualsiasi contenuto in qualsiasi momento senza preavviso.
+    </p>
+    <p>
+      Nei limiti consentiti dalla legge applicabile, Sapori d'Italia non è responsabile per
+      danni diretti, indiretti, incidentali o consequenziali derivanti dall'utilizzo o
+      dall'impossibilità di utilizzare il Sito o i suoi contenuti.
+    </p>
+  </div>
+
+  <div class="disclaimer-section">
+    <h2>8. Legge applicabile</h2>
+    <p>
+      Il presente Disclaimer è regolato dalla legge italiana. Per qualsiasi controversia relativa
+      all'utilizzo del Sito, è competente il Tribunale del luogo di residenza del titolare del Sito,
+      salvo diverse disposizioni di legge applicabili ai consumatori.
+    </p>
+    <p>
+      Per domande relative a questo Disclaimer, contattaci all'indirizzo:
+      <a href="mailto:info@saporidItalia.it">info@saporidItalia.it</a> oppure tramite il
+      <a href="contact.html">modulo di contatto</a>.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-logo">Sapori <span>d'Italia</span></span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+    <li><a href="about.html">Chi Siamo</a></li>
+    <li><a href="contact.html">Contatti</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Sapori d'Italia &mdash; Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>
