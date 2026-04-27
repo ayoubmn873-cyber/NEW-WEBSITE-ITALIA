@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi Siamo — Sapori d'Italia</title>
+  <meta name="description" content="Sapori d'Italia nasce dalla passione per la cucina italiana autentica. Scopri la nostra storia, i nostri valori e la missione che ci guida ogni giorno." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red: #b5201a; --gold: #c9973a; --cream: #fdfaf4; --cream-2: #f5f0e8; --dark: #1c1209; --text: #1e1a16; --muted: #7a6f65; --border: #e8e0d4; --white: #ffffff; }
+    body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.8; font-size: 17px; }
+
+    /* NAVBAR */
+    .navbar { position: sticky; top: 0; z-index: 100; background: var(--dark); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 68px; }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+    .logo span { color: var(--gold); font-style: italic; }
+    .nav-links { list-style: none; display: flex; gap: 32px; }
+    .nav-links a { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.65); text-decoration: none; text-transform: uppercase; letter-spacing: 1.4px; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* PAGE HERO */
+    .page-hero { background: var(--dark); padding: 80px 24px 72px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(201,151,58,0.08) 0%, transparent 70%); }
+    .page-hero .eyebrow { display: block; font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .page-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; color: var(--white); line-height: 1.15; }
+    .page-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.6); max-width: 520px; margin: 18px auto 0; font-weight: 300; }
+
+    /* CONTENT */
+    .page-wrap { max-width: 820px; margin: 0 auto; padding: 72px 24px 100px; }
+
+    /* STORY SECTION */
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; margin-bottom: 72px; }
+    .story-text h2 { font-family: 'Playfair Display', serif; font-size: 1.9rem; color: var(--text); margin-bottom: 18px; line-height: 1.2; }
+    .story-text p { color: #4a413a; margin-bottom: 16px; }
+    .story-visual { background: var(--dark); border-radius: 20px; aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 16px 48px rgba(0,0,0,0.18); }
+    .story-visual .big-num { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .story-visual .big-label { font-size: 13px; color: rgba(255,255,255,0.55); letter-spacing: 2px; text-transform: uppercase; }
+
+    /* VALUES */
+    .values-title { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--text); margin-bottom: 40px; text-align: center; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 72px; }
+    .value-card { background: var(--white); border: 1.5px solid var(--border); border-radius: 16px; padding: 32px 24px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .value-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+    .value-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+    .value-card h3 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--text); margin-bottom: 10px; }
+    .value-card p { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+
+    /* DIVIDER */
+    .divider { border: none; border-top: 2px solid var(--border); margin: 56px 0; }
+
+    /* TEAM NOTE */
+    .team-note { background: var(--cream-2); border-radius: 20px; padding: 48px 40px; text-align: center; border: 1.5px solid var(--border); }
+    .team-note h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--text); margin-bottom: 16px; }
+    .team-note p { color: #4a413a; max-width: 580px; margin: 0 auto 24px; }
+    .team-note .cta-link { display: inline-block; background: var(--red); color: #fff; font-size: 14px; font-weight: 600; padding: 13px 32px; border-radius: 3px; text-decoration: none; letter-spacing: 0.5px; transition: background 0.2s; }
+    .team-note .cta-link:hover { background: #8f1713; }
+
+    /* FOOTER */
+    footer { background: var(--dark); color: rgba(255,255,255,0.4); text-align: center; padding: 48px 24px; }
+    .footer-logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--white); display: block; margin-bottom: 20px; }
+    .footer-logo span { color: var(--gold); font-style: italic; }
+    .footer-links { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 20px; }
+    .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.22); }
+
+    @media (max-width: 768px) {
+      .navbar { padding: 0 20px; } .nav-links { gap: 16px; }
+      .story-grid { grid-template-columns: 1fr; gap: 32px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .page-wrap { padding: 48px 20px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html" class="logo">Sapori <span>d'Italia</span></a>
+  <ul class="nav-links">
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <span class="eyebrow">La nostra storia</span>
+  <h1>Chi Siamo</h1>
+  <p>Una passione per la cucina italiana autentica, tramandata di generazione in generazione.</p>
+</div>
+
+<div class="page-wrap">
+
+  <!-- STORY -->
+  <div class="story-grid">
+    <div class="story-text">
+      <h2>Nati dalla passione per la cucina vera</h2>
+      <p>
+        Sapori d'Italia nasce da un'idea semplice ma potente: raccogliere, preservare e condividere
+        le ricette della tradizione italiana autentica — quelle che si tramandano in famiglia,
+        scritte a mano su foglietti ingialliti, raccontate dalle nonne nelle cucine profumate di ragù.
+      </p>
+      <p>
+        In un mondo in cui il web è pieno di ricette semplificate, modificate o adattate a gusti
+        internazionali, abbiamo scelto la strada opposta: la fedeltà alla tradizione. Ogni ricetta
+        sul nostro sito è ricercata, testata e raccontata con rispetto per le sue origini regionali.
+      </p>
+      <p>
+        Crediamo che cucinare italiano non sia solo una questione di ingredienti — è un atto
+        culturale, un modo di stare insieme, un linguaggio d'amore che supera ogni confine.
+      </p>
+    </div>
+    <div class="story-visual">
+      <span class="big-num">2019</span>
+      <span class="big-label">Anno di fondazione</span>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <h2 class="values-title">I Nostri Valori</h2>
+  <div class="values-grid">
+    <div class="value-card">
+      <span class="value-icon">🇮🇹</span>
+      <h3>Autenticità</h3>
+      <p>Ogni ricetta è fedele alla tradizione regionale di origine. Niente scorciatoie, niente adattamenti forzati.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">🫶</span>
+      <h3>Passione</h3>
+      <p>La cucina italiana è amore. Ogni piatto che pubblichiamo è testato con cura e raccontato con entusiasmo genuino.</p>
+    </div>
+    <div class="value-card">
+      <span class="value-icon">📖</span>
+      <h3>Educazione</h3>
+      <p>Spieghiamo il perché di ogni tecnica e ogni ingrediente. Cucinare bene significa capire, non solo eseguire.</p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- TEAM NOTE -->
+  <div class="team-note">
+    <h2>Hai una ricetta di famiglia da condividere?</h2>
+    <p>
+      Siamo sempre alla ricerca di storie e ricette autentiche legate alla tradizione italiana.
+      Se hai una ricetta di famiglia che vorresti vedere su Sapori d'Italia, scrivici —
+      saremo felici di ascoltarti.
+    </p>
+    <a href="contact.html" class="cta-link">Scrivici ora</a>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-logo">Sapori <span>d'Italia</span></span>
+  <ul class="footer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pasta/index.html">Pasta</a></li>
+    <li><a href="antipasti/index.html">Antipasti</a></li>
+    <li><a href="dolci/index.html">Dolci</a></li>
+    <li><a href="secondi/index.html">Secondi</a></li>
+    <li><a href="about.html">Chi Siamo</a></li>
+    <li><a href="contact.html">Contatti</a></li>
+    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+    <li><a href="disclaimer.html">Disclaimer</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 Sapori d'Italia &mdash; Tutti i diritti riservati</p>
+</footer>
+</body>
+</html>

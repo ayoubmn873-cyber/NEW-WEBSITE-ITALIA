@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /privacy-policy.html
+Disallow: /disclaimer.html
+
+Sitemap: https://saporidItalia.it/sitemap.xml
