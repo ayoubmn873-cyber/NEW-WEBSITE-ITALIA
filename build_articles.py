@@ -870,8 +870,11 @@ HTML_TEMPLATE = """\
       color: #fff;
       text-decoration: none;
       flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 9px;
     }}
-    .topbar-logo span {{ color: #c9973a; font-style: italic; }}
+    .topbar-logo em {{ color: #c9973a; font-style: italic; }}
     .topbar-nav {{
       display: flex;
       align-items: center;
@@ -1071,7 +1074,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav class="topbar">
-  <a href="/" class="topbar-logo">italricette</a>
+  <a href="/" class="topbar-logo"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" aria-hidden="true"><path d="M7 17V7" stroke="#c9973a" stroke-width="1.5" stroke-linecap="round"/><path d="M7 7C7 4.5 4 2 1 2c0 3 2.5 5.5 6 5.5z" fill="#c9973a"/><path d="M7 11C7 8.5 10 6 13 6c0 3-2.5 5.5-6 5.5z" fill="#c9973a" opacity="0.75"/></svg><span><em>ital</em>ricette</span></a>
   <ul class="topbar-nav">
     <li><a href="../pasta/">Pasta</a></li>
     <li><a href="../antipasti/">Antipasti</a></li>
