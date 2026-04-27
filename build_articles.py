@@ -1,13 +1,13 @@
 """
-Sapori d'Italia — Article Generator
+italricette — Article Generator
 Run: python build_articles.py
 """
 
 from pathlib import Path
 
 BASE   = Path(__file__).parent
-DOMAIN = "https://saporidItalia.it"
-SITE   = "Sapori d'Italia"
+DOMAIN = "https://italricette.com"
+SITE   = "italricette"
 DATE   = "2026-04-27"
 
 ARTICLES = [
@@ -1071,7 +1071,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <nav class="topbar">
-  <a href="/" class="topbar-logo">Sapori <span>d'Italia</span></a>
+  <a href="/" class="topbar-logo">italricette</a>
   <ul class="topbar-nav">
     <li><a href="../pasta/">Pasta</a></li>
     <li><a href="../antipasti/">Antipasti</a></li>
@@ -1167,7 +1167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <footer>
-  &copy; 2026 <a href="/">Sapori d'Italia</a> &mdash; Tutti i diritti riservati &nbsp;|&nbsp;
+  &copy; 2026 <a href="/">italricette</a> &mdash; Tutti i diritti riservati &nbsp;|&nbsp;
   <a href="../privacy-policy.html">Privacy</a> &nbsp;|&nbsp;
   <a href="../disclaimer.html">Disclaimer</a>
 </footer>

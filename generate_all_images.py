@@ -1,5 +1,5 @@
 """
-Sapori d'Italia — Full Image Generator (NEW PROMPT STYLE)
+italricette — Full Image Generator (NEW PROMPT STYLE)
 19 total images: hero + 4 categories + 5 articles x2
 
 Run:   python generate_all_images.py
@@ -534,7 +534,7 @@ def generate(prompt: str, out: Path, ratio: str) -> bool:
 
 def main():
     print("=" * 55)
-    print("  Sapori d'Italia - Image Generator (New Prompts)")
+    print("  italricette - Image Generator (New Prompts)")
     print(f"  Total: {len(IMAGES)} images | Force: {FORCE}")
     print("=" * 55)
 

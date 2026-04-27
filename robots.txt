@@ -4,4 +4,4 @@ Allow: /
 Disallow: /privacy-policy.html
 Disallow: /disclaimer.html
 
-Sitemap: https://saporidItalia.it/sitemap.xml
+Sitemap: https://italricette.com/sitemap.xml
