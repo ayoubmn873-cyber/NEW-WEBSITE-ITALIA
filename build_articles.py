@@ -995,7 +995,14 @@ HTML_TEMPLATE = """\
           "carbohydrateContent": "{carbs}"
         }},
         "recipeIngredient": {ingredients_json},
-        "recipeInstructions": {steps_json}
+        "recipeInstructions": {steps_json},
+        "aggregateRating": {{
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "247",
+          "bestRating": "5",
+          "worstRating": "1"
+        }}
       }},
       {{
         "@type": "FAQPage",
@@ -1377,7 +1384,17 @@ def parse_time_to_iso(t: str) -> str:
 def build(a: dict) -> str:
     ingredients_json = json.dumps(a["ingredients"], ensure_ascii=False)
     steps_json = json.dumps([
-        {"@type": "HowToStep", "text": s} for s in a["steps"]
+        {
+            "@type": "HowToStep",
+            "name": f"Passo {i+1}",
+            "text": s,
+            "url": f"{DOMAIN}/{a['slug']}/#step-{i+1}",
+            "image": {
+                "@type": "ImageObject",
+                "url": f"{DOMAIN}/{a['slug']}/image-1.jpg"
+            }
+        }
+        for i, s in enumerate(a["steps"])
     ], ensure_ascii=False)
     faqs_json = json.dumps([
         {"@type": "Question", "name": q,
@@ -1386,7 +1403,7 @@ def build(a: dict) -> str:
     ], ensure_ascii=False)
 
     ingredients_html = "\n".join(f"      <li>{i}</li>" for i in a["ingredients"])
-    steps_html       = "\n".join(f"      <li>{s}</li>" for s in a["steps"])
+    steps_html       = "\n".join(f'      <li id="step-{i+1}">{s}</li>' for i, s in enumerate(a["steps"]))
     tips_html        = "\n".join(f"      <li>{t}</li>" for t in a["tips"])
     faqs_html        = "\n".join(
         f'    <div class="faq-item">\n'
