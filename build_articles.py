@@ -1282,7 +1282,7 @@ HTML_TEMPLATE = """\
         "recipeCategory": "{category}",
         "recipeCuisine": "{cuisine}",
         "keywords": "{keywords}",
-        "recipeYield": "{servings} servings",
+        "recipeYield": "{servings}",
         "nutrition": {{
           "@type": "NutritionInformation",
           "calories": "{cal_num} calories",
@@ -1666,10 +1666,10 @@ import json
 import re
 
 def parse_time_to_iso(t: str) -> str:
-    """'25 min' -> '25M', '1 hr 30 min' -> '1H30M', '4 hrs (chill)' -> '4H'"""
+    """'25 min' -> '25M', '1h 30min' -> '1H30M', '1h' -> '1H'"""
     t = re.sub(r'\(.*?\)', '', t).strip()
-    hrs = re.search(r'(\d+)\s*hr', t)
-    mins = re.search(r'(\d+)\s*min', t)
+    hrs  = re.search(r'(\d+)\s*h(?:r|our)?s?\b', t, re.IGNORECASE)
+    mins = re.search(r'(\d+)\s*min', t, re.IGNORECASE)
     result = ""
     if hrs:
         result += f"{hrs.group(1)}H"
