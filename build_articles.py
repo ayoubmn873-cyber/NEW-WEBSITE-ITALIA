@@ -2150,6 +2150,16 @@ HTML_TEMPLATE = """\
   <script src="https://d3u598arehftfk.cloudfront.net/prebid_hb_38809_40467.js" async></script>
 </head>
 <body>
+<div id='HB_Footer_Close_hbagency_space_320395'>
+ <div id='HB_CLOSE_hbagency_space_320395'></div>
+ <div id='HB_OUTER_hbagency_space_320395'>
+<div id='hbagency_space_320395'></div>
+ </div></div>
+<div id='HB_Footer_Close_hbagency_space_320396'>
+ <div id='HB_CLOSE_hbagency_space_320396'></div>
+ <div id='HB_OUTER_hbagency_space_320396'>
+<div id='hbagency_space_320396'></div>
+ </div></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q7MLKKM"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -2202,6 +2212,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="meta-badge"><span class="lbl">Difficolt&agrave;</span><span class="val">{difficulty}</span></div>
   </div>
 
+  <div id='hbagency_space_320398'></div>
+
   <!-- Prose 1 -->
   <div class="prose">
     <h2>{prose1_h2}</h2>
@@ -2242,6 +2254,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>{prose3_h2}</h2>
     <p>{prose3}</p>
   </div>
+
+  <div class="hb-ad-inpage">
+    <div class="hb-ad-inner">
+    <div class="hbagency_cls hbagency_space_320399"></div></div></div>
 
   <!-- FAQ -->
   <section class="faq-section">
